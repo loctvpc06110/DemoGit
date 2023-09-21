@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocTVPC06110</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>    
+</head>
+<body>
+    <div class="container-header">
+        <div class="header-search">
+            <div class="search-inner">
+            <input type="text" class="search-input" placeholder="Tìm truyện ở dây...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    
+        <div class="header">
+            <div class="header-inner">
+                <div class="logo"><a href="../index.html"><img src="../images/truyen-tranh-low-resolution-logo-color-on-transparent-background.png" alt=""></a></div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="../index.html" class="menu-link">Trang Chủ</a></li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Thể Loại</a>
+                        <div class="menu-child">
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="" class="menu-link">Kho Truyện</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="loginORsignup">
+                <button onclick="login()">Đăng Nhập</button>
+                <button onclick="signup()">Đăng Ký</button>
+            </div>
+            <div class="container_login" id="login_required" >
+            <h1 class="heading">Đăng nhập</h1>
+            <form>
+                <label for="username">Tên đăng nhập:</label><br>
+                <input class="form_input" type="text" id="username" name="username"><br>
+                <label for="password">Mật khẩu:</label><br>
+                <input class="form_input" type="password" id="password" name="password"><br><br>
+                <input class="form_button" type="button" value="Đăng nhập" onclick="validateLogin()">
+            </form>
+            </div>
+            <div class="container_signup" id="signup_required">
+            <h1 class="heading">Đăng ký</h1>
+            <form>
+                <label for="name">Họ và tên:</label><br>
+                <input class="form_input" type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input class="form_input" type="email" id="email" name="email" onchange="isEmail()"><br>
+                <div class="span" id="email_pattern">Email ko hơp lệ !</div>
+                <label for="username2">Tên đăng nhập:</label><br>
+                <input class="form_input" type="text" id="username2" name="username2"><br>
+                <label for="password2">Mật khẩu:</label><br>
+                <input class="form_input" type="password" id="password2" name="password2"><br><br>
+                <input class="form_button" type="button" value="Đăng ký" onclick="validateRegistration()">
+            </form>
+            </div>
+        </div>
+            <script>
+                var username2, password2;
+                var isCheck = true;
+                function validateRegistration() {    
+                    
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    username2 = document.getElementById("username2").value;
+                    password2 = document.getElementById("password2").value; 
+                    
+                    if (name === ''){
+                        document.getElementById('name').classList.add('inputNOTOK_border_required');
+                        isCheck = false;
+                        }else{
+                             document.getElementById('name').classList.add('inputOK_border_required');
+                    }
+                    if (email === ''){
+                        document.getElementById('email').classList.add('inputNOTOK_border_required');
+                        isCheck = false;
+                        }else{
+                            document.getElementById('email').classList.add('inputOK_border_required');
+                    }
+                    if (username2 === ''){
+                        document.getElementById('username2').classList.add('inputNOTOK_border_required');
+                        isCheck = false;
+                        }else{
+                             document.getElementById('username2').classList.add('inputOK_border_required');
+                    }
+                    if (password2 === ''){
+                        document.getElementById('password2').classList.add('inputNOTOK_border_required');
+                        isCheck = false;
+                        }else{
+                            document.getElementById('password2').classList.add('inputOK_border_required');
+                    }
+
+                    if(isCheck == false) {
+                        alert("Vui lòng nhập đầy đủ thông tin.");
+                    }else {
+                        alert("Đăng ký thành công. Chào mừng " + name + "!");
+                    }
+                }
+                function validateLogin() {
+                    document.getElementById('username').classList.remove('inputNOTOK_border_required');
+                    document.getElementById('password').classList.remove('inputNOTOK_border_required');
+
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+        
+                    if (username === ''){
+                        document.getElementById('username').classList.add('inputNOTOK_border_required');
+                    
+                    }
+                    if (password === ''){
+                        document.getElementById('password').classList.add('inputNOTOK_border_required');
+
+                    }
+                    if(username === username2 && String(password) === String(password2)) {
+                        alert("Đăng nhập thành công. Chào mừng " + username + "!");
+                        window.location.href="../index.html";
+                    } else {
+                        alert("Sai !")
+                    }
+                }
+            </script>
+            <script src="../js/user.js"></script>
+</body>
+</html>

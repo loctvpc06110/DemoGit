@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dtl.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+
+    <div class="container-header">
+        <div class="header-search">
+            <div class="search-inner">
+            <input type="text" class="search-input" placeholder="Tìm truyện ở dây...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    
+        <div class="header">
+            <div class="header-inner">
+                <div class="logo"><a href="../index.html"><img src="../images/truyen-tranh-low-resolution-logo-color-on-transparent-background.png" alt=""></a></div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="../index.html" class="menu-link">Trang Chủ</a></li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Thể Loại</a>
+                        <div class="menu-child">
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-item">
+                                <ul class="menu-child-list">
+                                    <li>Action</li>
+                                    <li>Isekai</li>
+                                    <li>Cooking</li>
+                                    <li>Drama</li>
+                                    <li>Cổ Đại</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="" class="menu-link">Kho Truyện</a></li>
+                    <li class="menu-item"><a href="../user/user.html" class="menu-link">Đăng Nhập</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Giỏ Hàng</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    <div class="grid wide">
+        <div class="list_detail">
+        <div class="row">
+            <div class="col l-5 m-5 c-12">
+                <div class="content-left">
+                <div class="detailSPL" id="detailSPL">
+                <div class="image-main" id="mainIMG">
+                    <!-- <img id="dtImage" src="../images/sp1.jpg" alt=""> -->
+                </div>
+                <div class="image-df">
+                    <img src="../images/sp2.jpg" alt="">
+                    <img src="../images/sp3.jpg" alt="">
+                    <img src="../images/sp4.jpg" alt="">
+                    <img src="../images/sp5.jpg" alt="">
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="col l-7 m-7 c-12">
+              <div class="content-right">
+                    <div class="detailSP" id="detailSPR">
+                    <div class="title" id="dtName"><h2>Đại quản gia là ma hoàng</h2></div>
+                    <div class="status">
+                        <span class="sp1-title">Tình trạng:</span>
+                        <span class="sp2-title" id="dtStatus">Còn hàng</span>
+                    </div>
+                    <div class="category">
+                        <span class="sp1-category">Thể loại:</span>
+                        <span class="sp2-category" id="dtCategory">Huyền huyễn, Trọng sinh</span>
+                    </div>
+                    <div class="author">
+                        <span class="sp1-author">Tác giả:</span>
+                        <span class="sp2-author"  id="dtAuthor">Huyền huyễn, Trọng sinh</span>
+                    </div>
+                    <div class="content">
+                        <span class="sp1-content">Nội dung:</span>
+                        <p>  Ma Hoàng Trác Nhất Phàm nhận được đến Thượng Cổ Ma Đế truyền thừa_Cửu U Bí Lục, đưa tới họa sát thân. Trọng sinh sau rồi hắn lại bởi vì tâm ma quấy phá, không thể không trở thành một cái cô đơn gia tộc quản gia. Thử xem một cái tàn nhẫn độc ác đại ma hoàng, như thế nào đem một cái tiểu gia tộc mang hướng đỉnh phong tồn tại.</p>
+                    </div>
+                    <div class="price" id="dtPrice">
+                        <!-- <span>Giá : 150.000 VNĐ</span> -->
+                    </div>
+                    </div>
+                    <div class="buy">
+                        <div class="muaNgay">
+                                <button id="submit" type="submit">Mua ngay</button>           
+                        </div>
+                        <div class="themCart">
+                            <button id="button-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+    <script src="../js/listProduct.js"></script>
+    <script type="text/javascript">
+        var url_string = location.href;
+        console.log(url_string);
+        var url = new URL(url_string);
+        console.log(url);
+        var id = url.searchParams.get('id');
+        console.log(id);
+        // console.log(listProduct);
+        // let nn = new URL(location.href).searchParams.get("id")
+        // console.log(nn);
+
+        for (let i = 0; i < listSP.length; i++) {
+            if(Number(id) === listSP[i].id){
+                console.log(listSP[i]);
+                let mainImage = `<img id="dtImage" src="../images/${listSP[i].image}" alt="">`;
+                document.getElementById('mainIMG').innerHTML = mainImage;
+                document.getElementById('dtName').innerHTML = listSP[i].name;
+                document.getElementById('dtStatus').innerHTML = listSP[i].statusproduct;
+                document.getElementById('dtCategory').innerHTML = listSP[i].category;
+                document.getElementById('dtAuthor').innerHTML = listSP[i].author;
+                let price = `<span>Giá : ${listSP[i].price} VNĐ</span>`;
+                document.getElementById('dtPrice').innerHTML = price;
+            }
+        }
+     </script>
+</body>
+</html>
